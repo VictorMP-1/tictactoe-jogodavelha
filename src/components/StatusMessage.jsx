@@ -10,7 +10,7 @@ function StatusMessage({ winner, current }) {
     <div className="staus-message">
       {winner && (
         <>
-          Winner is {''}
+          O vencedor é {''}
           <span className={winner === 'X' ? 'text-green' : 'text-orange'}>
             {winner}
           </span>
@@ -18,7 +18,7 @@ function StatusMessage({ winner, current }) {
       )}
       {!winner && !noMovesLeft && (
         <>
-          Next player is {''}
+          O próximo jogador é {''}
           <span className={current.isXNext ? 'text-green' : 'text-orange'}>
             {current.isXNext ? 'X' : 'O'}
             {''}
@@ -27,8 +27,8 @@ function StatusMessage({ winner, current }) {
       )}
       {!winner && noMovesLeft && (
         <>
-          <span className="text-green">X</span> and {''}
-          <span className="text-orange">O</span> tied
+          <span className="text-green">X</span> e {''}
+          <span className="text-orange">O</span> empataram
         </>
       )}
     </div>
